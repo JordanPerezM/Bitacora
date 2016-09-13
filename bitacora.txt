@@ -8,3 +8,11 @@
 mar 13 sep 2016
 
 Segundo intento de bitacora, ahora hare espaldos en git
+
+# Como ver mis propios datos
+
+Formatos de los data sets  bigBed, bigWig, BAM, or VCF 
+
+Para conectarlo a ubuntu SSH    ssh browser@localhost -p 1235 la contrasena es browser 
+
+
