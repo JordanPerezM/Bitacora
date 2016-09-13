@@ -2,4 +2,9 @@
 
 #Podre escribir aqui, toda la informacion complementaria
 
-#Este cambio lo hizo un gato o no. 
+#Este cambio lo hizo un gato o no.
+
+	:put =strftime('%a %d %b %Y') 
+mar 13 sep 2016
+
+Segundo intento de bitacora, ahora hare espaldos en git
