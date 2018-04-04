@@ -1,0 +1,377 @@
+15 de noviembre 2016
+
+Los omas
+
+la tendencia de genomas, protenomica etc.
+
+Medir el fenotipo es complicado. mientras medir DNA es mas sencillo. Se puede medir el DNA mas sencillo y barato. 
+
+Expresion de genes
+
+tecnicas, son, usar microarreglos y hacer secuenciacion.
+Union, usando ChIP.sep 
+
+
+todas usan secuenciacion en la parte final del analisis
+
+microarreglo, generalmente son cubre objetos. donde se ponen oligos complementarios y usar el DNA de interes marcado para hacer una hibridacion conjunta para saber aque se pega. y se pueden ver las mezclas de las imagenes, para comparar, dos colores, rojos o verdes, y si son amarillos se expresan en ambas. 
+
+primera revolucion 
+
+el problema que no se pueden ver cosas nuevas, solo se puden ver interacciones conocidas.  es muy barato solo si te interesa lo que ya se conoce. limitantes que no se puden detectar cosas finas, se va a hibirdar pero con menos afinidad y no se nota.
+
+Tony triany microarreglos mandar saliva :O
+
+Tiene alta reproducinl.idad, el analisis es muy estandarizado.
+
+Solo sepuden medir con secuencias conocidas. es dificil identificar isoformas, solo se van a detectar isoformas que se conocen . imposible identidicar cambios de novo, mdificaicion de nucleotidos.
+
+Secuenciacion 2006
+
+hay muchas que salieron del mercado. 
+
+laevolucion de la secuenciacion
+
+magnitud. compañia veritas. 
+
+Principales secuenciaciones
+
+Pirosecuenciacion
+
+cortar pegar adaptadores emulcion PCR. aceite con agua para formar micelas. mas aceite que agua y en las micelas de agua se hhacen las copias en las perlas, casa hoyo va a tener solo una perla con muchas secuencuas de distinta secuencia. 
+
+DEsues en cada plato, polimerasa, mas sulforilazion y luciferasa pones A se hace la reaccion y vez en que parte se prende y asi con cada parte. despues se remueve el bloqueo y se vuele va  hacer 
+
+ya se descontinuo pero era una idea genial :D 
+
+El problema, los homopolimeros cuando se tienen muchas AAAA la luz emitida no es correspondiente, alta tasa de errores en esa parte. hoy en dia son pocas secuencias. 
+
+Pros. bajo costo. Secuencias largas. (500nt)
+
+Ilumina (solexa) secuenciacion por sintesis. 
+
+
+fragmentos. adpatadores. diferentes en cada extremo para poderle poner direccionalidad. cada adaptador en una direccion. importante en RNA. 
+
+bioanalaisar como un gen electronico que dice que la distribucion es correcta.
+
+Los adaptadores necesitan que la secuencua este adeninados. para que se peguen.
+
+idea de ilumina que hace que sea mas barato. 
+
+flouser tienen rendijas, donde van pegados los adpatadores se llaman lines. el flouser tienen muchas lineas. 200 millones de secuencias. 
+
+se pega el ADN a su adaptador contrario y se hace un bridge PCR se duplican los adaptadores.  y al elevar la tempratura quedan syueltosy se repite repite, hace que se creen colonias de secuencias. por cercania. se hacen clsters de la misma secuencia. Al tener la colonia en vez de hacer reaccion quimica par ala luz, mas bien se tienen distintos nucleotidos con floroforos diferentes. se pasa el nucleotido con terminador reversible, para que solo se vayan metiendo uno por uno. se pegan incorporan se hace reaccion con un lacer se ve uales brillan y se pone el siguiente nucleotido. se quita el terminador reversible y se vuelve a hacer lo mismo. 
+
+Limite lumina 200y 250 bases a veces hay secuencias que se desfasan mas adelante por ser reaccion quimica. 200 millones de colonias de aprox 200 a 250 nts
+
+ventajas. mucho soporte para usuarios. 
+muchas cantidades de secuncias, menor tasa de error pero sigue siedo mas alta que sanger
+
+Secuencias cortas, es relativamente caro, es un poco lento. 
+
+ion (pH) secuenciacion
+
+secuenciacion por pH  una perlacon adaptador se va agregando nucleotidos, en vez de medir lu o algo, se mide cambio en el pH (cambio de voltaje) tener microchip, lo hace muy barato. 
+
+problema, tiene muchos errores. secuencias cortas  200 nts produce pocas secuencias por experimeinto.  podria ser que sale mas caro cuando se tienen muchas muestras. 
+
+Secuenciacion por nanoPore
+
+MEmbrana con proteina nueva que agarra el ADN y lo desenrolla al pasar por el poro de una proteina desarrollada con ingenieria genetica. la membrana donde esta el poro puede medir el cambio en la membrana. 
+
+lo siguiente es buscar que se haga en RNA directamente evitar tener que amplificar. 
+
+ventajas, s
+
+
+secuenciacionen tiempo real
+
+Se puede parar cuando se tienen los datos que quieras. 
+
+portable, preparacion simple.
+
+lecturas de 7kb.
+
+Sepodria detectar metilaciones al buscar cambios de voltajes relacionados con esos cambios. 
+
+contras
+
+Alto error
+Muchos poros no agarran bien a veces es muy variable. 
+se proyecta costo caro y s ebusca abaratar. los costos varian 
+
+Todavia es un poco caro 
+
+SMRT single molecular Real Time Secuencing
+
+secuenciacion en timepo real se tienen polimerasa en el fondo de cada poso. cada nucleotido tiene floroforo diferente. solo detecta el nucleotido que se esta incorporando se pueden tener secuencias largas pero hay alta tasa de error. pero para evitar los singularizan lo leen varias veces oara poder determinar por concenso la secuenia real, no rrequiere amplificacion. 860 a 1100 nucleotidos
+
+contras 
+
+extra caro mucho
+alto error y tiende a remover muchos CG
+
+ChIP-Sep
+
+analisis epigenetico
+
+Primer paso, extraer cromatina lo mas completa que se pueda, y despues experimento. Se fragmenta, se usa el anticuerpo, se usa el anticuepro complementario, se extrae se generan librerias porque podrian ser largas y se secuncian, se mapean contra el genoma (se necesita genoma) 
+
+se hace control experimeinto y si estan en ambos experiemntos significa que es ruido y se quita. 
+
+se pude hacer con modificadores de histonas o bien con factores de trasncripcion en el ADN. 
+
+Hay mucho -Seq alguna sobre salientes
+
+ChIP-Seq  se sonica
+
+DNAse-seq se usan endonucleasas. se hace seleccion por tamaño s quiere saber que partes de la cromatina estan abiertos, solo se secuencian estos. otros mas :D
+
+Espectrometria de masas. Se extraen proteinas, se separan por gel de una dimencion se separan los pptidos. lo interesante es la fragmentacion y se van separando a distintos tiempos de acuerdo  a su tamaño, se estampas contra un detector y se hace un perfil de su masa. cuando se tienen peptidos ya conocidos o enzima, loa aminoacidos tambien se pueden detecatar pero con distinto  es proteomica
+
+Metabolomica. se hacen perfiles de masas. para los metabolitos mas comunes, pero mucho muchos metabolitos. 
+
+clase de la tarde
+
+Estudiando regulacion genica a escala genomica 
+
+Fractores de trasncripcion en eucariotes reclutan polimerasa. tienen dominios de pegado a ADN entonces losfactores se diferencian por ser los que se pegan. 
+
+Eucariotes tienen varios RNA polimerasas. 
+
+LOs promotoores en genes eucariotes. 
+
+el modelo dice. cuando se pega directamente al ADN es un factor de trascripcion
+
+muchos factores de trasncripcion tienden a crear dimeros, se pegan a si mismos, homodimeros o bien se pueden crear heterodimeros. 
+
+splicing alternativo. 
+con un solo gen se pueden generar muchas distintas proteinas. se crean isoformas que puden cambiar la funcion de proteinas. diversisdad de proteinas por splicling. 
+
+Diferencia entre splicing alternativo  retencionde intrones en plantas, saltarse exones en mas abundante en seres humanos. y splicing normal esta en proporciones similares.
+
+- como se degrada mRNA deadeninacion quita poli A y CAP y por una exonucleasa se come al RNA
+
+- se corta en medio por una endonucleasa y asi partidos se degrada. 
+
+Como sabemos cuales genes se estan trasncribiendo, se comparan condiciones distintas analisis de expresion diferencial. Tambien se puede hacer ChIP por la polimerasa para saber que genes se trascriben en un momento dado. que genes esta en su promotor el factor de ttrasncripcion. 
+
+losdos ultimos son importantes porque no indica que se esta trasncribiendo. podria esta pausada la RNA pol o el FT podria no estar promoviendo
+
+Es importante que hata controles para poder concluir algo
+
+
+RNA seq 
+
+Se tienen que cuantificar en isoformas 
+
+TF ChIP analysis
+
+Ejemplo
+
+diferencia funcional porque se pegan de manera diferente los TF diferente al sitio de inicio de trasncripcion. 
+
+enriquecimiento funcional. 
+
+como idendifcar1
+
+como identificarias que genes son acivados por un factor de trasncriocion de interes. 
+
+tomar a lo que se le esta pegando. 
+
+mutar el sitio donde se pega el factor de trasncripcion y ver si en verdad se inhibe el pegado. 
+
+como asegurar que el FT tiene ese efecto por pegarse al ADN 
+
+si tienes un fenotipo medible a mutar el sitio de pegado. 
+
+transcriptoma, que hacen y como estan involucrados en metabolismo de glucosa. 
+
+en el desarrollo de arabidopsis, tenemos todos los tiempos y se ve cuales factores se exppresan en que tiempo. actualmente se puede ver a que se pega en cada etapa.  
+
+hacer un ChIP de la polimerasa elongando. y se verian trozos del gen trozos a medias de RNA o partes de DNA en donde este puesta la polimerasa. 
+
+siempre buscar contras y pros. 
+
+Enhancer
+
+son secuencias que estan en trans se pegan factores detrasncripcion y controlan varios se pegan tambien proteinas y recluta mediator es un complejo. dobla la secuencia. mediator es un coactivador, facilida la ativacion pero no es parte de la maquinaria trasncripcional y no se une directamente al DNA. 
+
+enhanceosoma 
+
+cuando a un enhancer se unen varios factores de trasncripcion y recluta remodeladores de cromatina. es importante cuando se tienen cromatina cerrada y es necesaria abrirla. 
+
+insulators 
+
+secuencuas que bloquean actividad de los enhancers si se pone entre el enhancer y el promotor, ya no hay actividad, separan los loops en la cromatina. 
+
+Marca especifica de histonas en enhancers. 
+
+16 nov 2016
+
+Articulo discusion
+
+Clase de la tarde
+
+Es cun complejo formado de ADN ARN y proteinas
+el componente principal esta formado por nucleosomoas 8 hstonas juntas donde se entollan dos veces el ADN aprox 154 pb
+
+Epigenetica es un rasgo que se hereda de forma estable, que genera cambios fenotipicos. pero no modifica bases de ADN y reversible. 
+
+86 por ciento del genoma humano es funcional, dice. 
+
+El hecho de que se encuentre una region abierta no significa que sea funcional. 
+
+influye a la regulacion genica, el como se desalojan los nucleosomas, afecta que tan rapido se esta generando el RNA mensajero.
+
+generalmente metilacion, ubiquitinacion y symoilacion reflejan compactacion de cromatida, 
+
+Modificaciones en colas de cromatina. por lo general H3y H4 tienen la mayoria de las  modificaciones. 
+
+Cuando se replica el ADN hay procesos que mantienen las marcas. 
+
+heterocromatina spread?
+
+Es otro metodo de regulacion, por vecindad de genes. si se coloca un gen cerca de una parte de heterocromatina no se expresa completamente
+
+probabilidades, cerca del gen white puede que haya un insolator
+insulator y enhancer son como los signos de puntuacion en la cromatina. la heterocromatina se expande a distintos niveles. 
+
+Efectos fenotipicos para poder conocer que tanto se esta expaniendo la cromatna. los insulator evitan tambien que la cromatina se expanda mas de lo que deberia. 
+Imprinting
+
+si se tienen dos alelos solo se expresa el materno o el paterno. CTCF en mamiferos es el elemnto aislador. hace unos loops cambia que pasa en cada region, si no esta la szona estara mas abierta. 
+
+herencia imprinting
+
+en las celulas germinales se quitan las marcas de imprinting pero se reinicia en los gametos en el macho y la hembra, Solo se expresa en el padre o en la madre y pueden ser variables alelos, cuando se genera el embrion ya estan los gametos improntados. 
+
+hay ciertos genes que se improntan muy pocos, la mayoria no les pasa. 
+se puede detectar con RNA seq al padre y a la madre y las cruzas y secuenciar el genoma parental y se puede ver si lo que se esta expresando es parental o maternal. 
+
+Hi C Estructura nuclear 
+
+crooslink de ADN se usa para determinar DNA por cercania. se identifican con bbiotina, se bajan con biotina. y solo se secuencia. al purificar solo se ven los extremos ligados al bajarlo con biotina. 
+
+HiC es todos contra todos. pero hay 3C 4C y 5C
+
+muchos prefieren hacer 4C por que hay muchos trasnposones. y en Hi C hay mucho ruido, no se puede saber que pasa u donde se podria pegar. 
+
+17 de nov 2016 jueves
+
+ARN no codificantes.
+
+hay diversidad trasncripcional, muchas regiones intergenicas se trasncriben, incluso los enhancer producer un RNA
+
+3% del ADN son proteinas cerca del 67% se transcriben en RNA
+
+Small RNAs en plantas
+
+extremo 3 prima es modificado, tiene una metilacion, en plantas. esta no existe en animales, los vuelve muy estables. 
+
+microRNA en plantas 22nt . 
+
+DICER super conservados, esta en muchos organismos. 
+
+siRNA small interferiet RNA asociados con la deposicion en novo de marcas de cormatina. DICER corta en varios lugares especificos produciendo varios trozos de un mismo siRNA y tienen un orden por el corto. 
+otros se forman con el RDR2 para formar las nuevas cadenas para regular. 
+
+
+
+transacting RNA en plantas 
+
+Biogenesis de small RNA. en plantas hay muchos tipos DICER. 
+
+mecanismo pre traduccion, AGO actividad endonucleasa, o actividad desadeninacion, proceso para quitar CAP, o bien en traduccion bloquea la trraduccion del ribosoma. 
+
+Biogenesis de heterocromatina siRNAs 
+
+Pol 4 y 5 crean trascriptos que pasan por RDR2 cortado por DICer y despues se unen a AGO y reclutan maquinaria reclutando DRM2 para agregar marcas de represion en cromatina. 
+
+Filipe tienen mutantes con distintos DICEr y ARGO y pol 4 y 5
+
+Secundary siRNA muy bien conocido en c elegants
+
+a partir de un solo siRNA pueden hcacer trarjeting a otros sitios del ADN el ARN que sobra. mntiene la respuesta de silenciamiento. mantienen el silenciamiento por mas tiempo y lo pasa por varias celulas. 
+
+miRNA funciones regulacion de inmunidad inhata. RNA modulan, mas que concretamente la abolen, tiene un limite y tienen su feedback loop que permite la autoregulacion. 
+
+Lnc RNAs
+
+moleculas de mas de 200nt que no poliadeninados tienen cap, tienen splicing incluso si no estan poliadeninado tienen parecido en este aspecto al mRNA lo que se ha reportado es como componente de complejos proteina, otra funcion es ser esponga de micro RNA. para evitar que se unan a su blanco se unene a los lncRNA como amotiguador. Normalmente lo captura con su argonauta. 
+
+Hay otro que es como una esponja de factores de transcripcion, inhibe TF practicamente.
+
+Reclutar modificadores de cromatina,modificadores de histona, metilacion, etc. 
+
+Modulacion de splicing los distintos componenentes U y tambien activa la degradacion. 
+
+Son muy poco conservados. En cuanto al silenciamiento de cromosomas, cambian incluso entre organismos, divergiendo pero con la misma funcion. muchos trasnposones terminan como lncRNA.
+
+la expresion esta muy regulada en ciertos tipos celulares, si se elimina un lncRNA puede afectar la floracion ejempl
+
+siRNA puede silenciar a lncRNA. 
+
+En expresion en cerebro se decubrio que aunque no se ve una enorme expresion, se ve poca porque es una expresion muy especifica. mientras mas celulas mas diluido el efecto por que son mas especificas. 
+
+funcionan como scafforls es decir que son andamios pra proteinas que no tienen dominios juntos, permitiendo cambios responsivos,rapidos, se pueden usar como guia jalando proteinas completas con la acetilasas o algo parecido. 
+
+cambios ed cromatina por Polycomb mediado por  COOLAIR asi se llama el lncRNA se conserva en estas especies, se cree que es lo que causa la respuesta al frio. hacen analisis de actividad y checan partes apareadas con reaccions quimicas para conocer las estructuras. cada base la prueban. quien sabe que se pegue primero polycomb o bien el lncRNA. las secuencias no necesariamente es la misma pero si la estuctura. 
+
+los miRNA se pegan por el extremo 3 prima. 
+
+
+18 NOV 2016
+
+Regulacion de proteinas redes regulatorias. 
+
+aprender acerca de co traduccional y postraduccional mecanismos que median la produccion de proteinas. 
+
+Non sense mediated decay. UPF1,2,3  reclutado durante traduccion insuficiente.
+
+Modificaciones en as proteinas, no todoas inducen decremento o incremento de la proteina, mas bien induce modificaciones de proteina epigenetica que son postraduccionales 
+
+tipos de modificacion de proteina.  
+
+unas de las mas impactantesen cunando a cantidad es la ubiquitinacion. se agrega en una cadena a una proteina. haciendo que la proteosoma la degrade. 
+
+inmuno precipitacion de cromatina, o incluso inhibir prteosoma. 
+
+sumoylacion es añadir peptidos, se hace un enlace isopeptidico, puede ser mono, o multi o bien en cadenas. 
+
+afectan el transpoete de proteinas, impiden que pasen de citoplasma a nucleo. Es una señal que activa o reprime la proteina. 
+
+Glycosilacion. agregar azucares a la cadena peptidica. 
+
+Secrecion de proteinas
+
+LOs peptido señal son cadenas peptidicas dentro de la misma proteina, que tiene muchos residuos hridofobicos. 
+
+Regulacion de inicio de la traduccion
+
+cap dependiente, IRES dependiente, carateristco en apoptosis.  es una estuctura del RNA que permite que se ensable el ribosoma. es activado por caspasas.
+
+Regulacion traduccional por uORFs outsite reading frames? 
+
+cuando se fosforila permite que inicie la la traduccion. si esta tratando de traducir pero no peude llegar hasta el marco de lectura, hasta qye se fosforiliza una de las unindes de inicio de traduccion
+
+Se tienen mini marcos de lectura abiertos, distraen al ribosoma, hasta que no lelga la siguiente señal que permite que avance.
+
+Si se tienen dos inicios se pude tener esta misma modificiacion haciendo que en ciertas condiciones traduzcan una y en otras condiciones traduzcan otro. 
+
+hay otros metodos de decir que si continua no continua. 
+
+PErfil de ribosoma. se comparan entre el mRNA fragmentado, se una nucleasa, y los ribosomas protegen al mRNA  se ailan los ribosomas unidos y despues con la nucleasa degradan. lo que queda es lo que ven. hacen secuenciaciony pueden ver cuales estan relacionados al ribosoma y cuales no. el primer codon se pegan mas tiempo en el ribosoma y se observan mas reads ahi. 
+
+Se usa mucho para saber si los lncRNA se traducen o no. 
+
+REdes regulatorias en genes. 
+
+En la misma red, todos se regulan entre si, creando su propio hub de regulacion, es una manra de representar las interacciones en una escala mas global. tambien se puden poner relaciones con miRNA,.
+
+Red coexpresion lncRNA 
+
+Diferencialmente activados genes de expresion, redes. 
+
+

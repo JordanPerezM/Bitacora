@@ -1,0 +1,437 @@
+#Esta es una bitacora para Git
+
+#Podre escribir aqui, toda la informacion complementaria
+
+#Este cambio lo hizo un gato o no.
+
+
+#Para entrar a mazorca ssh lperez@10.10.10.240  
+
+#Para colocar la fecha
+
+	:put =strftime('%a %d %b %Y') 
+mar 13 sep 2016
+
+Segundo intento de bitacora, ahora hare espaldos en git
+
+# Como ver mis propios datos
+
+Formatos de los data sets  bigBed, bigWig, BAM, or VCF 
+
+#Para conectarlo a ubuntu SSH    ssh browser@localhost -p 1235 la contrasena es browser 
+
+#Herramientas de conversion
+
+gbibAddTools.
+
+Descarga e instala herramientras adicionales a las que ya vienen en GBiB
+
+
+
+ This command downloads and installs the full suite of command line tools provided by UCSC.
+#lun 19 sep 2016
+
+#Establecer carpetas compartidas, simplemente parar el GBiB y en opciones buscart la pestaña que diga carpetas compartidas y agregar las requeridas, pueden ser varias. 
+
+#Subir informacion de las carpetas es encesario lo siguiente
+
+
+
+#fasta a BAM
+
+bowtie 1.1.2 para linux
+
+bowtie-0.12.9
+
+bowtie-1.1.2 intalacion desde la carpeta /HOME
+
+#OPCION 1
+
+#Modificar PATH
+
+#env  Es usado para mostrar una lista de las variables de entorno y para ejecutar otro programa con las variables de entorno modificadas sin tener que modificar las variables de entorno del equipo. Usando el comando env se pueden añadir y eliminar variables, además de poder modificar el valor de las variables actuales.
+
+# grep lee la entrada estándar o una lista de archivos, e imprime las líneas que contengan coincidencias para la expresión regular.
+
+
+env | grep PATH 
+
+PATH=/home/jordan/bin:/home/jordan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+#De la manera anterior comprobamos que bowtie no esta en el PATH
+
+There is a special file located in your home directory called .bash_profile that specifies PATH. To add to PATH, we can use the text editor vi to edit this file
+
+
+
+vim ~/.bash_profile  #Para ver dentro del archivo, en mi caso, el archivo es
+
+vim ~/.profile
+
+#y para cambiar opciones de inicio 
+
+vim ~/.bashrc
+
+#~ OBSERVACION- NO FUNCIONO SEGUREMENTE POR EL USO DE bowtie 1.1.2 para linux EL CUEL NO ES COMPATIBLE CON MI VERSION DE LINUX i868 
+
+#OPCION 2 recomendado en la pagina del bowtie
+
+#Descomprimir el zip, y situarse dentro de la carpeta
+
+#usar comando 
+
+make o Make install
+
+#obsrvaciones a pesar de tener instalado las configuraciones del comando make, y el comando .configure, no pude realizar la instalcion porque no encontraba el archivo instalado.
+
+
+#OPCION 3 (FUNCIONO) https://bioinf.comav.upv.es/courses/linux/unix/administracion_software.html
+
+USANDO 
+
+bowtie-0.12.9
+
+#En este caso esta version es compatible con el sistema  bowtie-0.12.9-linux-i386 
+
+#la siguiente parte es moviendo el archivo y renombrando para tenerlo de la siguiente manera
+
+/usr/local/bowtie/
+
+#Para hacerlo ejecutable, podems hacerlode la siguiente manera desde la consola debemos modificar la variable con la siguiente orden:
+
+$ export PATH=$PATH:/usr/local/bowtie/:/usr/local/bowtie/scripts/
+
+#sin embargo debemos modificar opciones para que desde el inicio se pueda ejecutar desde consola, en mi caso modifico la carpeta
+
+vim ~/.profile
+
+# if running bash
+if [ -n "$BASH_VERSION" ]; then
+    # include .bashrc if it exists
+    if [ -f "$HOME/.bashrc" ]; then
+        . "$HOME/.bashrc"
+    fi
+fi
+
+# set PATH so it includes user's private bin directories
+PATH="$HOME/bin:$HOME/.local/bin:$PATH"
+
+#Esto es lo que agregue
+
+PATH=$PATH:/usr/local/bowtie/:/usr/local/bowtie/scripts/
+
+#De esta manera pude instalar
+
+#HACER UN INDICE (INDEX) con Bowtie 
+
+bowtie-build [options]* <reference_in> <ebwt_base>
+
+#En mi caso use el siguiente comando desde la localizacion 
+
+cd
+
+cd  /TRICO/Genoma
+
+bowtie-build -f Trichoderma_atroviride_v2.fasta index/TRICHO_ATROVI_V2
+
+#se crearon los 6 archivos de index
+
+#Como tengo dudas con respecto a realizar el archivo SAM a partir del .fasta del genoma, realizare los SAM para los alineados de prueba con el .fastaq con el index generado.
+
+
+#Primero DESCOMPRIMIR  situandome en 
+
+/TRICO/Obtenido
+
+#usando el comando
+
+gzip -d *.gz  
+
+
+#A continuacion ALINEAR, PASAR A SAM usar el comando
+
+ desde /TRICO
+
+#(Bowtie)- el programa a usar
+#(-S) Formato a salida 
+#(Genoma/index/TRICHO_ATROVI_V2)  El index de referencia con su ruta desde TRICO 
+#(Obtenido/ah1ta3ss33-05_ACAGTG_L005_R1_001.fastq) Secuencia a alinear con su ruta desde TRICO
+#( SAM/ta_33-05-001.sam) Archivo de salida, nombre seleccionado.
+
+
+bowtie -S Genoma/index/TRICHO_ATROVI_V2 Obtenido/ah1ta3ss33-05_ACAGTG_L005_R1_001.fastq SAM/ta_33-05-001.sam 
+
+Resultado
+
+# reads processed: 4000000
+# reads with at least one reported alignment: 3274259 (81.86%)
+# reads that failed to align: 725741 (18.14%)
+Reported 3274259 alignments to 1 output stream(s)
+
+#Ahora lo convertimos a BAM
+
+#La instalacion de samtools fue la siguiente 
+
+sudo apt install samtools
+
+#el comando para convertir es el siguiente
+
+#samtools -Programa a usar
+#view  -  With no options or regions specified, prints all alignments in the specified input alignment file (in SAM, BAM, or CRAM format) to standard output in SAM format (with no header)
+#-b: indicates that the output is BAM.
+#-S: indicates that the input is SAM.
+#-bS -Lo anterior
+#-o: specifies the name of the output file.  
+
+
+ samtools view -bS -o BAM/ta_33-05-001.bam SAM/ta_33-05-001.sam
+
+#se obtiene
+
+[samopen] SAM header is present: 29 sequences.
+
+# Pra observar 
+
+
+samtools view -f 4 ta_33-05-001.bam | more
+
+
+# Acontinuacion de corta el archivo de la siguiente manera
+
+samtools sort ta_33-05-001.bam ta_33-05-001.sorted
+
+#Se obtubo 
+
+[bam_sort_core] merging from 2 files...
+
+
+#A continuacion voy acargar un archivo en el GBiB
+
+ssh browser@localhost -p 1235   #no olvidar para usarlo desde la consola
+
+track type=bam name=BamExample bigDataUrl=http://127.0.0.1:1234/folders/test/bamExample.bam
+
+#seria pero se aplica en el navegador, no en la terminal
+
+track type=bam name=TRICOa_33-05-001 bigDataUrl=http://127.0.0.1:1234/folders/sf_TRICO/BAM/ta_33-05-001.bam
+
+#pide un archivo .bai es decir un index, tengo algunas dudas respecto a esto
+
+#se puede realizar el archivo desde samtools de la siguiente manera
+
+samtools index [-bc] [-m INT] aln.bam|aln.cram [out.index] 
+
+ Options:
+
+-b Create a BAI index. This is currently the default when no format options are used. 
+-c Create a CSI index. By default, the minimum interval size for the index is 2^14, which is the same as the fixed value used by the BAI format. 
+-m INT  Create a CSI index, with a minimum interval size of 2^INT. 
+
+#Las dudas son respecto al archivo que voy a usar para crear el .bai, si bien deberia ser del index, no parece ser asi. ya que este creado a apartir del fasta no se puede pasar a BAM. Y este comando solo acepta archivos bam obien sorted.bam.
+
+
+#PAra GBIB
+
+gbibOffline
+
+gbibOnline
+
+#Para leer desde la consola de GBIB
+
+ more /usr/local/apache/cgi-bin/hg.conf
+
+ more README.txt  
+#Mi siguiente paso es el siguiente.
+
+ 
+convertir fasta a 2bit (genoma)
+Convertir gtf a bedfile
+
+# Para convertir fasta a 2bit (genoma), hay varias formas
+
+#Se puede descargar la herramienta para realizar esto desde
+ http://hgdownload.soe.ucsc.edu/admin/exe/ 
+
+#PRIMERA OPCION
+
+#sin embargo al probar herramientas para linux    linux.x86_64/  no corren, siento mi sistema de i386 debido a mi instalación, elegi esto debido a que lo recomendaban para tarjetas integradas inteHD. Talves debi probar la otra opcion. 
+
+#sin embargo lo intenta igualmente usando el siguiente comando (ademas de MAke y make install) para ejecutar la aplicacion desde la terminal.
+
+ export PATH=$PATH:/usr/local/faToTwoBit/:/usr/local/faToTwoBite/scripts/
+
+#claro moviendo el archivo al directorio correspondiente
+
+#OPCION 2 (Aplicacion en java)
+
+https://code.google.com/archive/p/java-fasta-to-two-bit-converter/wikis
+
+#Encontre esta aplicacionenjava quepude correr adecuadamente de la siguiente manera,al descargarlo lo situe en 
+
+/Bowties/fa2bit.jar
+
+#Descargar e instalar java
+
+sudo apt install default-jre
+
+#y ahora si correrlo de acuerdo a la estructura presentada en la web 
+
+java -jar Fa22BitConverter.jar --input /path/to/chromosome1.fasta@/path/to/chromosome2.fasta@/path/to/chromosoe3.fasta --output file.2bit 
+
+#modificandolo para mi caso,todo desto desde el directorio donde esta localizado el archivo java, en mi caso es /Bowties
+
+
+java -jar fa2bit.jar --input /home/jordan/TRICO/Genoma/Trichoderma_atroviride_v2.fasta --output /home/jordan/TRICO/Genoma/Trichoderma_atroviride_v2.2bit
+ 
+#y listo tenemos el archivo deseado
+
+#CONVERTIR gtf a bedfile  Estas son las anotaciones y distribucion del genoma, son obtenidas de la pagina 
+
+ftp://ftp.ensemblgenomes.org/pub/release-32/fungi/gtf/fungi_ascomycota1_collection/trichoderma_atroviride_imi_206040/  #Los dos archivos disponibles
+
+#Para convertirlo usaremos lo siguiente
+
+http://bedops.readthedocs.io/en/latest/content/reference/file-management/conversion/gtf2bed.html#downloads
+
+#Y aqui esta la descarga
+
+https://github.com/bedops/bedops/releases
+
+#Instalacion, al descargar dentro del folder /Bowties se descomprime de la siguiente manera
+
+tar jxvf bedops_linux_i386-v2.4.20.tar.bz2  #La version puede variar de acuerdo al paquete descargado
+
+#Despues es importante, para poder correrlo, se tiene que colocar en una pocision que corra al incio del sistema, es decir que este en el PATH
+
+sudo cp bin/* /usr/local/bin  #Otra opcion es modificar el fichero .profile para agregar la ruta creando otro folder
+
+#Con esto ya tenemos instalada la version , podemos comprobarlo de lasiguiente manera
+
+convert2bed --version
+
+#Arroja
+
+convert2bed
+  version:  2.4.20
+  author:   Alex Reynolds
+
+#Usando el comando en la localizacion
+
+/home/jordan/TRICO/Genoma/Anotaciones
+
+gzip -d *.gz
+
+#Se descomprimen ambos archivos
+
+#Para convertir tenemos lo siguiente 
+
+gtf2bed < foo.gtf > sorted-foo.gtf.bed
+
+#Desde el mismo directorio de descompresion 
+
+gtf2bed < Trichoderma_atroviride_imi_206040.TRIAT_v2_0.32.gtf > Sorted-Trichoderma_atroviride_imi_206040.TRIAT_v2_0.32.gtf.bed 
+
+#En este caso marca un error
+
+Error: Potentially missing gene or transcript ID from GTF attributes (malformed GTF at line [1]?)
+
+#Se hace lo mismo con el siguiente archivo
+
+gtf2bed < Trichoderma_atroviride_imi_206040.TRIAT_v2_0.32.abinitio.gtf > Sorted-Trichoderma_atroviride_imi_206040.TRIAT_v2_0.32.abinitio.gtf.bed 
+
+#En este caso no marca ningun error
+
+
+#En la primera opcion se tiene un archivo corto para poder seguir manipulandolo en el programa, yo lo hare de las los opciones
+
+gtf2bed --do-not-sort < foo.gtf > unsorted-foo.gtf.bed
+
+gtf2bed --do-not-sort < Trichoderma_atroviride_imi_206040.TRIAT_v2_0.32.gtf > Unsorted-Trichoderma_atroviride_imi_206040.TRIAT_v2_0.32.gtf.bed 
+
+Error: Potentially missing gene or transcript ID from GTF attributes (malformed GTF at line [1]?)
+
+
+gtf2bed --do-not-sort < Trichoderma_atroviride_imi_206040.TRIAT_v2_0.32.abinitio.gtf > Unsorted-Trichoderma_atroviride_imi_206040.TRIAT_v2_0.32.abinitio.gtf.bed
+
+
+#Los archivos no quedaron bien convertidos, por lo que recurriremos a otra alternativa
+
+#OPCION RECOMENDADA, instalar kentultils
+
+https://github.com/ENCODE-DCC/kentUtils/
+
+#En la pagina se encuentran las instrucciones pero se resume en descargar,descomprimir hacer make y mover de lugar para poder crear la ruta en el sistema. 
+
+sudo rsync -a -P ./bin/ /usr/local/bin/kentUtils/ #Desde el folder donde se hizo make para poder moverlo al directorio.
+
+#Lo siquiente se agrega al archivo
+
+vim ~/.profile
+
+export PATH=$PATH:/usr/local/bin/kentUtils
+
+y ya estan disponibles
+
+
+#De esta manera ya podemoscorrer el siguiente comando.
+
+faToTwoBit Trichoderma_atroviride_v2.fasta Trichoderma_atroviride_v2.2bit
+
+
+#Para convertir el .gtf a .bet hacemos lo siguiente
+
+#Ejemplo
+
+grep -P 'gene_biotype \"protein_coding\"' Ciona_intestinalis.KH.71.gtf  > Ciona_intestinalis.KH.71.protein_coding.gtf
+gtfToGenePred Ciona_intestinalis.KH.71.protein_coding.gtf Ciona.gp
+genePredToBed < Ciona.gp > Ciona.bed
+
+#grep Para buscar una determinada cadena de caracteres en un archivo
+#-P, --perl-regexp         PATTERN is a Perl regular expression
+#'gene_biotype \"protein_coding\"' para solo obtener las regiones codificantes
+
+#Se siguieron los siguientes pasos
+
+grep -P 'gene_biotype \"protein_coding\"' Trichoderma_atroviride_imi_206040.TRIAT_v2_0.32.gtf > Trichoderma_atroviride_imi_206040.TRIAT_v2_0.32.protein_coding.gtf  #Para solo seleccionar los genes codificantes
+
+#Para convertir a .genePred
+
+gtfToGenePred Trichoderma_atroviride_imi_206040.TRIAT_v2_0.32.protein_coding.gtf  Trichoderma_atroviride_imi_206040.TRIAT_v2_0.32.protein_coding.genePred
+
+
+#Para convertir a .bed
+
+genePredToBed  Trichoderma_atroviride_imi_206040.TRIAT_v2_0.32.protein_coding.genePred  Trichoderma_atroviride_imi_206040.TRIAT_v2_0.32.protein_coding.bed
+
+#obtenemos elsiguiente archivo
+
+jordan jordan 981K sep 27 12:35 Trichoderma_atroviride_imi_206040.TRIAT_v2_0.32.protein_coding.bed
+
+#Por si queremos hacerlo con todo
+
+gtfToGenePred Trichoderma_atroviride_imi_206040.TRIAT_v2_0.32.gtf  Trichoderma_atroviride_imi_206040.TRIAT_v2_0.32.genePred
+
+genePredToBed  Trichoderma_atroviride_imi_206040.TRIAT_v2_0.32.genePred  Trichoderma_atroviride_imi_206040.TRIAT_v2_0.32.bed
+
+
+#Entrar a mysql 
+
+mysql hgcentral
+
+show databases #mostrar la base de datos que hay
+
+#siempre se termina la orden con ;
+
+#Extender tamaño de la particion virtual
+
+VBoxManage modifyhd "/home/jordan/Documentos/Posgrado-CINVESTAV/Rotaciones/Dra Selene/gbib/gbib-root.vdi" --resize 20480 
+
+#Por convecion para agregar nueva especie
+
+triAtr1
+
+#No se pudo realizar la intalacion de las herramientas del Gbib
+
+http://10.0.0.109
+
+l

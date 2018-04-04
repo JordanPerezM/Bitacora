@@ -1,0 +1,25 @@
+Introduccion 
+
+Que es un Genome Browser
+Es una interfaz grafica que muestra la informacion desde un base de datos biologica, para obtener datos genomicos.
+
+Prediccion de genes y estrcutura, proteinas, expresion regulacion, variacion, analisis comparativo entre otros. 
+
+útilidad de la herramienta 
+
+con la llegada de las nuevas generaciones desecuenciacion se necesitan herramientas que ofrescan un rapido y facil acceso a los datos y las anotaciones, para realizar analisis comparativos de datos
+
+
+#El objetivo fue, usar herramientas del UCSC para crear un browser de trichoderma atroviride
+
+Es una maquina virtual que emula el UCSC Genome Browser desde la computadora, con todas las funcionalidades de la pagina. Pero enfocado a personas que buscan usar estas herramientas en datos protegidos, tus datos pueden ser agregados permanentemente en los datos a visualizar.
+
+En nuestro caso, es una estructura ya creada que con algunas modificaciones podra  mostrar un genoma agregado a la base de datos de la MySQL  
+
+
+
+Avance 
+siguiente paso, perspectivas
+
+
+

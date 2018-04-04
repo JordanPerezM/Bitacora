@@ -1,0 +1,54 @@
+lunes 28 de noviembre 2016
+
+crear Trackhub para triAtr1 Trichoderma_atroviride
+
+Realize un folder publico. llamado public_html
+
+y dentro, deben ir los archivos base
+
+$ mkdir GenomeHub
+$ cd GenomeHub 
+
+
+$ vim hub.txt
+
+
+hub Sp_genome_hub
+shortLabel triAtr1 Genome (Jordan Perez)
+longLabel Trichoderma atroviride Genome and tracks setup by Jordan Perez
+genomesFile genomes.txt
+email joperezmedina@gmail.com
+descriptionURL aboutHub.html
+
+Dentro se creo 
+
+vim genome.txt 
+
+con la siguiente informacion
+
+genome triAtr1
+trackDb triAtr1/trackDb.txt
+groups triAtr1/groups.txt
+description Trichoderma atroviride Genome
+twoBitPath triAtr1/triAtr1.2bit
+organism Trichoderma atroviride
+#defaultPos EQ973772:1000000-2000000
+scientificName Trichoderma atroviride
+htmlPath triAtr1/description.html
+
+
+Acontinuacion, segenera la informacion sobre el tamaño de los cromosomas.
+Desde dentro de la carpeta donde seencuentra el genoma. .2bit
+
+twoBitInfo Trichoderma_atroviride_v2.2bit stdout | sort -k2rn > triAtr1.chrom.sizes
+
+En este paso, no estoy seguro del uso de los archivos BAM y .bai pero para practica coloque los obtenidos de la primera ronda. yque ya tenia generados. serian los siguientes
+
+
+ta_33-05-001.bam           
+ta_33-05-001.sorted.bam    
+ta_33-05-001.sorted.bam.bai
+
+
+
+

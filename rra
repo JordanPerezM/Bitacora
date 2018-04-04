@@ -1,0 +1,100 @@
+
+the role of  phospholipids in maize adaptation to Mexican highlands
+
+
+- https://github.com/rr-lab/uc_mexus_16/blob/master/project_plan/uc_mexus_2016_rellan_fiehn.md
+- https://www.odrive.com/s/36031de7-3f76-48f8-aa73-6e2fabc3c807-583db720
+- https://github.com/rossibarra/PGRP15/blob/master/rossibarra_pgrp2015.pdf
+Checa también mi web para más proyectos y presentaciones:
+
+https://www.rrlab.org/
+
+Balsas teosinte tierras bajas
+
+Chalco teosinte  tierras altas domesticado de valsas teosinte hace 9000 años en el valle balsas
+
+Maiz de tierras altas se expone a 
+
+alta radiacion
+baja precion de aire
+baja y poco precipitacion y temperatura
+Poca disposicion de fosforo  suelos  andosol
+
+Plantas en suelos bajo de fosforo
+
+reciclar P contenido en RNAs y fosfolipidos (sustitutendolo con Galactolipidos y sulfolipidos)
+
+Plantas en bajas temperaturas
+Aumento de fosfolipidos en la membrana para mantener la fluides de la misma, al ser mas polares. 
+Normalmente hay proporciones considerables de Galactolipidos y sulfolipido
+
+La diversidad de lipidos polares pueden ser mayores a lo esperado y encontrados en las rutas metabolicas conocidas.
+
+Perfiles de lipidos mostraron ser buenos predictores de tiempo para  floreamiento
+
+Fosfatilcolina es el fosfolipido mas abundante en plantas
+
+
+# When the proportion of PC with respect relative to phosphoethanolamine (PE) is genetically reduced () flowering time is reduced, probably because the FT complex with PC favors the union of FT to the promoter of FT target genes. 
+
+-dudas, porque el Ft complejo con PC favorece la union de FT a el promotor de genes blanco FT. porque antes dice que es geneticamente deducida, se refiere al tiempo de floracion o al tiempo para llegar a la floracion.
+
+
+Genotipos de maices a usar
+
+Palomero toluqueño y B73
+A mapping population composed of 100 Palomero Toluqueño (PT, a Mexican highland landrace) x B73 (sequenced US inbred line) 
+
+
+hipotesis
+
+La reorganizacion del metabolismo de los fosfolipidos podria tener un papel clave en la adaptacion a tierras altas del maiz.
+
+metas
+
+perfil de fosfolipidos polares
+patrones de expresion de los genes involucrados en su sintesis
+
+condiciones de crecimiento 
+
+tierras altas 20 dia 10 noche
+tierras  bajas 30 dia 20 noche 
+14 horas de luz 10 de noche
+lamitad de cada temp  creciendo en condiciones de bajo fosforo y la otra mitad en un control de fosforo
+
+se optimizaran procedimeintos de extraccion de lipidos para maiz
+
+Sera la base para estudios de expresion alelo expecifica (ASE) usando RNA-seq
+se estudiaran padrones de metilacion en la ruta de genes de los fosfolipidos, podria estar relacionado al reciclaje de lipidos cuando hay deficiencia de fosforo
+
+
+META 2 caracterizar la variacion natural y la arquitectura genetica del metabolismo de fosfolipidos
+QTL que controlar la reorganizacion de lipidos polares en tierras altas	
+
+con el analisis de metaboitos se puede dar una idea de la presencia de enzims presentes para su sintesis.
+
+conla cuantificacion de tantos metabolitos usandolos como fenotipo, se puden cuantificar que rutas metaboicas estan siendo potenciadas en las diferentes condiciones. 
+
+RILs recombinant inbred strain (or recombinant inbred line) is an organism with chromosomes that incorporate an essentially permanent set of recombination events between chromosomes inherited from two or more inbred strains. F1 and F2 generations are produced by intercrossing the inbred strains; pairs of the F2 progeny are then mated to establish inbred strains through long-term inbreeding
+
+
+Que es un GWAS? Es un estudio de asociación en del genoma con una patología o patologías en especial que pueden ser monogénicas o poligénicas
+
+p value  se define como la probabilidad de obtener un resultado al menos tan extremo como el que realmente se ha obtenido (valor del estadístico calculado), suponiendo que la hipótesis nula es cierta, en términos de probabilidad condicional:
+
+META 3
+ Identificar el efecto de mutaciones en genes involucrados en la biosintesis de  Phosphatydilcholine (PC)
+
+para la produccion de PC hay tres enzimas que estan involucradas, en el maiz cada una de estas tiene al menos 4 alelos
+
+se recolectaran muestras para hacer RT-qPCR de los genes inovvlurcrados en larutade PC para:
+
+Al modificar concentraciones de PC se observara el efecto que tiene en el tiempo de floracion y mas.
+
+mecanismos de compensacion entre las diferentes ramas de la ruta de PC y su impacto en rasgos morfologicos. 
+
+MEtas a futuro
+
+Crosses and genotyping of PtdCho maize mutants.
+Grow mutants in highland and lowland fields.
+Analyze flowering time and root development phenotyping.
